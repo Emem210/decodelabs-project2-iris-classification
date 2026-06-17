@@ -1,0 +1,56 @@
+============================================================
+  PROJECT 2: DATA CLASSIFICATION USING AI (KNN)
+  Dataset: Iris Benchmark
+============================================================
+
+Samples       : 150
+Features      : 4 -> ['sepal length (cm)', 'sepal width (cm)', 'petal length (cm)', 'petal width (cm)']
+Classes       : 3 -> [np.str_('setosa'), np.str_('versicolor'), np.str_('virginica')]
+Class balance : [50 50 50]  (perfectly balanced: 50/50/50)
+
+[Scaling] Mean after scaling : [-0. -0. -0. -0.]
+[Scaling] Std  after scaling : [1. 1. 1. 1.]
+
+[Split] Training samples : 120
+[Split] Testing samples  : 30
+
+[Model] Algorithm    : K-Nearest Neighbors (k=5)
+[Model] Status       : Trained successfully
+
+============================================================
+  OUTPUT VALIDATION
+============================================================
+
+Accuracy : 93.33%
+F1 Score : 0.9327  (weighted average across classes)
+
+Confusion Matrix:
+                 Predicted
+                setosa    versic    virgin
+Actual   setosa       10         0         0
+Actual   versic        0        10         0
+Actual   virgin        0         2         8
+
+Full Classification Report:
+              precision    recall  f1-score   support
+
+      setosa       1.00      1.00      1.00        10
+  versicolor       0.83      1.00      0.91        10
+   virginica       1.00      0.80      0.89        10
+
+    accuracy                           0.93        30
+   macro avg       0.94      0.93      0.93        30
+weighted avg       0.94      0.93      0.93        30
+
+============================================================
+  BONUS: Predicting a new, unseen sample
+============================================================
+
+Input  : [5.1 3.5 1.4 0.2] (sepal_len, sepal_wid, petal_len, petal_wid)
+Predicted class : setosa
+Confidence      : {np.str_('setosa'): np.float64(1.0), np.str_('versicolor'): np.float64(0.0), np.str_('virginica'): np.float64(0.0)}
+
+============================================================
+  PIPELINE COMPLETE.
+============================================================
+Exit code: 0
